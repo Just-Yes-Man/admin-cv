@@ -7,7 +7,7 @@ import { WorkExperience } from '../../models/work-experience/work-experience.mod
 })
 export class WorkExperienceService {
 
-  
+
   private dbPath = '/work-experience';
 
   workExperienceRef: AngularFirestoreCollection<WorkExperience>;
@@ -21,11 +21,12 @@ export class WorkExperienceService {
   }
 
   createWorkExperience(myJob: WorkExperience): any {
-     return this.workExperienceRef.add({ ...myJob });
+    const { id, ...jobNoId } = myJob; // Elimina el id si está presente
+    return this.workExperienceRef.add(jobNoId);
   }
 
-  deleteWorkExperience(id? : string): Promise<void> {
-     return this.workExperienceRef.doc(id).delete();
+  deleteWorkExperience(id?: string): Promise<void> {
+    return this.workExperienceRef.doc(id).delete();
   }
 }
- 
+

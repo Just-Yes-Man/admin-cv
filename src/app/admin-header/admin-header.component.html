@@ -1,1 +1,39 @@
-<p>admin-header works!</p>
+<div class="container color-dark">
+    <div class="col">
+        <p>work-experience items</p>
+    </div>
+</div>
+
+<div class="container color-light">
+    <div class="col">
+        <form>
+            <input type="text" class="txt" name="email" placeholder="email" [(ngModel)]="myHeader.email">
+            <br>
+            <input type="text" class="txt" name="Lifegoal" placeholder="Lifegoal" [(ngModel)]="myHeader.goalLife"> <br>
+            <input type="text" class="txt" name="location" placeholder="location" [(ngModel)]="myHeader.location">
+            <br>
+            <input type="text" class="txt" name="Name" placeholder="Name" [(ngModel)]="myHeader.name">
+            <br>
+            <input type="text" class="txt" name="phoneNumber" placeholder="phoneNumber"
+                [(ngModel)]="myHeader.phoneNumber">
+            <br>
+            <input type="text" class="txt" name="photourl" placeholder="photourl" [(ngModel)]="myHeader.photoUrl">
+            <br>
+            <input type="text" class="txt" name="socialnetwork" placeholder="socialnetwork"
+                [(ngModel)]="myHeader.socialNetwork"> <br>
+
+
+            <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarHeader()">
+        </form>
+    </div>
+
+    <div class="col">
+        <p class="life-container" *ngFor="let head of header">
+
+            <input type="submit" class="btn" value="update" (click)='updateHeader(myHeader.email)'>
+            <input type="submit" class="btn" value="delete" (click)='deleteHeader(head.id)'>
+
+            {{head.name}} – {{head.location}}
+        </p>
+    </div>
+</div>

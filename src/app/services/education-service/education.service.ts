@@ -27,4 +27,9 @@ export class EducationService {
   deleteEducation(id?: string): Promise<void> {
     return this.educationServiceRef.doc(id).delete();
   }
+
+  updateEducation(myEducation: Education, id_U?: string,): Promise<void> {
+    const { id, ...educationNoId } = myEducation;
+    return this.educationServiceRef.doc(id_U).update(educationNoId);
+  }
 }

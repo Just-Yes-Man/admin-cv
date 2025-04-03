@@ -44,8 +44,10 @@ export class AdminSkillsComponent {
   }
 
   updateSkill(id?: string) {
-
-    alert('updating .. ' + id);
+    this.skillsService.updateSkills(this.mySkills, id).then(() => {
+      console.log('update item successfully');
+    });
+    console.log(id);
   }
 
 }

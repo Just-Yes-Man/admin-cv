@@ -44,7 +44,9 @@ export class AdminHeaderComponent {
   }
 
   updateHeader(id?: string) {
-
-    alert('updating .. ' + id);
+    this.headerService.updateHeader(this.myHeader, id).then(() => {
+      console.log('update item successfully');
+    });
+    console.log(id);
   }
 }

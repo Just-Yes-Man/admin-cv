@@ -28,5 +28,10 @@ export class LanguagesService {
   deleteLanguages(id?: string): Promise<void> {
     return this.languagesServiceRef.doc(id).delete();
   }
+
+  updateLanguages(myLanguages: Languages, id_U?: string,): Promise<void> {
+    const { id, ...languagesNoId } = myLanguages;
+    return this.languagesServiceRef.doc(id_U).update(languagesNoId);
+  }
 }
 

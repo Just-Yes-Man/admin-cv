@@ -28,5 +28,10 @@ export class SkillsService {
   deleteSkills(id?: string): Promise<void> {
     return this.skillsRef.doc(id).delete();
   }
+
+  updateSkills(mySkill: Skills, id_U?: string,): Promise<void> {
+    const { id, ...skillNoId } = mySkill;
+    return this.skillsRef.doc(id_U).update(skillNoId);
+  }
 }
 

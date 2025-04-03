@@ -45,6 +45,9 @@ export class AdminEducationComponent {
 
   updateEducation(id?: string) {
 
-    alert('updating .. ' + id);
+    this.educationService.updateEducation(this.myEducation, id).then(() => {
+      console.log('update item successfully');
+    });
+    console.log(id);
   }
 }

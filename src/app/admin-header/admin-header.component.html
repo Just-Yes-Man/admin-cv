@@ -30,7 +30,7 @@
     <div class="col">
         <p class="life-container" *ngFor="let head of header">
 
-            <input type="submit" class="btn" value="update" (click)='updateHeader(myHeader.email)'>
+            <input type="submit" class="btn" value="update" (click)='updateHeader(head.id)'>
             <input type="submit" class="btn" value="delete" (click)='deleteHeader(head.id)'>
 
             {{head.name}} – {{head.location}}

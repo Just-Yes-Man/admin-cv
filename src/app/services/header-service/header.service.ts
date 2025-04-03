@@ -19,12 +19,17 @@ export class HeaderService {
     return this.headerServiceRef;
   }
 
-  createHeader(myLanguage: Header): any {
-    const { id, ...languagesNoId } = myLanguage; // Elimina el id si está presente
-    return this.headerServiceRef.add(languagesNoId);
+  createHeader(myHeader: Header): any {
+    const { id, ...headersNoId } = myHeader; // Elimina el id si está presente
+    return this.headerServiceRef.add(headersNoId);
   }
 
   deleteHeader(id?: string): Promise<void> {
     return this.headerServiceRef.doc(id).delete();
+  }
+
+  updateHeader(myHeader: Header, id_U?: string,): Promise<void> {
+    const { id, ...headersNoId } = myHeader;
+    return this.headerServiceRef.doc(id_U).update(headersNoId);
   }
 }

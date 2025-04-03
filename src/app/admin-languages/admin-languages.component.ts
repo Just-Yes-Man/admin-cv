@@ -44,7 +44,9 @@ export class AdminLanguagesComponent {
   }
 
   updateLanguages(id?: string) {
-
-    alert('updating .. ' + id);
+    this.languaguesService.updateLanguages(this.myLanguages, id).then(() => {
+      console.log('update item successfully');
+    });
+    console.log(id);
   }
 }

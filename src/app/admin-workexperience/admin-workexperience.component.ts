@@ -30,23 +30,25 @@ export class AdminWorkexperienceComponent {
     });
   }
 
-  AgregarJob(){
+  AgregarJob() {
     console.log(this.myWorkExperience);
     this.workExperienceService.createWorkExperience(this.myWorkExperience).then(() => {
       console.log('Created new item successfully!');
     });
   }
 
-  deleteJob(id? :string){
+  deleteJob(id?: string) {
     this.workExperienceService.deleteWorkExperience(id).then(() => {
       console.log('delete item successfully');
     });
-      console.log(id);
+    console.log(id);
   }
 
-  updateJob(id? :string){
-    
-	  alert('updating .. '+id);
+  updateJob(id?: string) {
+    this.workExperienceService.updateWorkExperience(this.myWorkExperience, id).then(() => {
+      console.log('update item successfully');
+    });
+    console.log(id);
   }
 }
 

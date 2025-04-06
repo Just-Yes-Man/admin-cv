@@ -1,1 +1,32 @@
-<p>admin-education works!</p>
+<div class="componente">
+
+    <div class="container color-dark ">
+        <div class="col">
+            <p class="titulo">Education items</p>
+        </div>
+    </div>
+
+
+    <div class="container color-light form">
+        <div class="col">
+            <form>
+                <input type="text" class="txt" name="email" placeholder="email" [(ngModel)]="myEducation.highSchool">
+                <br>
+                <input type="text" class="txt" name="Lifegoal" placeholder="Lifegoal"
+                    [(ngModel)]="myEducation.university">
+                <br>
+                <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarEducation()">
+            </form>
+        </div>
+
+        <div class="col">
+            <p class="life-container" *ngFor="let edu of education">
+
+                <input type="submit" class="btn" value="update" (click)='updateEducation(edu.id)'>
+                <input type="submit" class="btn" value="delete" (click)='deleteEducation(edu.id)'>
+
+                {{edu.highSchool}} – {{edu.university}}
+            </p>
+        </div>
+    </div>
+</div>

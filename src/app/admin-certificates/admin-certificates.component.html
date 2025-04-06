@@ -1,1 +1,31 @@
-<p>admin-certificates works!</p>
+<div class="componente">
+    <div class="container color-dark">
+        <div class="col">
+            <p class="titulo">Certificate items</p>
+        </div>
+    </div>
+
+    <div class="container color-light form">
+        <div class="col">
+            <form>
+                <input type="text" class="txt" name="email" placeholder="email"
+                    [(ngModel)]="myCertificates.certificateMobile">
+                <br>
+                <input type="text" class="txt" name="Lifegoal" placeholder="Lifegoal"
+                    [(ngModel)]="myCertificates.certificateWeb">
+                <br>
+                <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarCertificates()">
+            </form>
+        </div>
+
+        <div class="col">
+            <p class="life-container" *ngFor="let cer of certificates">
+
+                <input type="submit" class="btn" value="update" (click)='updateCertificates(cer.id)'>
+                <input type="submit" class="btn" value="delete" (click)='deleteCertificates(cer.id)'>
+
+                {{cer.certificateMobile}} – {{cer.certificateWeb}}
+            </p>
+        </div>
+    </div>
+</div>

@@ -1,28 +1,30 @@
-<div class="container color-dark">
-    <div class="col">
-        <p>work-experience items</p>
-    </div>
-</div>
-
-<div class="container color-light">
-    <div class="col">
-        <form>
-            <input type="text" class="txt" name="startDate" placeholder="start date (mm/yyyy)"
-                [(ngModel)]="myLanguages.originLanguage"> <br>
-            <input type="text" class="txt" name="endDate" placeholder="end date (mm/yyyy)"
-                [(ngModel)]="myLanguages.exLanguage"><br>
-
-            <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarLanguages()">
-        </form>
+<div class="componente">
+    <div class="container color-dark">
+        <div class="col">
+            <p class="titulo">languages items</p>
+        </div>
     </div>
 
-    <div class="col">
-        <p class="life-container" *ngFor="let lan of languagues">
+    <div class="container color-light form">
+        <div class="col">
+            <form>
+                <input type="text" class="txt" name="startDate" placeholder="start date (mm/yyyy)"
+                    [(ngModel)]="myLanguages.originLanguage"> <br>
+                <input type="text" class="txt" name="endDate" placeholder="end date (mm/yyyy)"
+                    [(ngModel)]="myLanguages.exLanguage"><br>
 
-            <input type="submit" class="btn" value="update" (click)='updateLanguages(lan.id)'>
-            <input type="submit" class="btn" value="delete" (click)='deleteLanguages(lan.id)'>
+                <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarLanguages()">
+            </form>
+        </div>
 
-            {{lan.originLanguage}} – {{lan.exLanguage}}
-        </p>
+        <div class="col">
+            <p class="life-container" *ngFor="let lan of languagues">
+
+                <input type="submit" class="btn" value="update" (click)='updateLanguages(lan.id)'>
+                <input type="submit" class="btn" value="delete" (click)='deleteLanguages(lan.id)'>
+
+                {{lan.originLanguage}} – {{lan.exLanguage}}
+            </p>
+        </div>
     </div>
 </div>

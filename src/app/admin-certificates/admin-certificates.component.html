@@ -21,8 +21,8 @@
         <div class="col">
             <p class="life-container" *ngFor="let cer of certificates">
 
-                <input type="submit" class="btn" value="update" (click)='updateCertificates(cer.id)'>
-                <input type="submit" class="btn" value="delete" (click)='deleteCertificates(cer.id)'>
+                <input type="submit" class="btn" value="update" (click)='confirmDelete(cer.id!)'>
+                <input type="submit" class="btn" value="delete" (click)='confirmUpdate(cer.id!)'>
 
                 {{cer.certificateMobile}} – {{cer.certificateWeb}}
             </p>

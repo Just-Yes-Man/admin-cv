@@ -49,4 +49,16 @@ export class AdminCertificatesComponent {
     });
     console.log(id);
   }
+
+  confirmDelete(id: string) {
+    if (confirm('¿Estás seguro de que quieres eliminar este ítem?')) {
+      this.deleteCertificates(id);
+    }
+  }
+
+  confirmUpdate(id: string) {
+    if (confirm('¿Estás seguro de que quieres actualizar este ítem?')) {
+      this.updateCertificates(id);
+    }
+  }
 }

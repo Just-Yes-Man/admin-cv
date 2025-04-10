@@ -49,4 +49,15 @@ export class AdminHeaderComponent {
     });
     console.log(id);
   }
+  confirmDelete(id: string) {
+    if (confirm('¿Estás seguro de que quieres eliminar este ítem?')) {
+      this.deleteHeader(id);
+    }
+  }
+
+  confirmUpdate(id: string) {
+    if (confirm('¿Estás seguro de que quieres actualizar este ítem?')) {
+      this.updateHeader(id);
+    }
+  }
 }

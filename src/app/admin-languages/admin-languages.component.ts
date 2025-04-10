@@ -49,4 +49,16 @@ export class AdminLanguagesComponent {
     });
     console.log(id);
   }
+
+  confirmDelete(id: string) {
+    if (confirm('¿Estás seguro de que quieres eliminar este ítem?')) {
+      this.deleteLanguages(id);
+    }
+  }
+
+  confirmUpdate(id: string) {
+    if (confirm('¿Estás seguro de que quieres actualizar este ítem?')) {
+      this.updateLanguages(id);
+    }
+  }
 }

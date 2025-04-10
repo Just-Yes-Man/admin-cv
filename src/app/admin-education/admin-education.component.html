@@ -22,8 +22,8 @@
         <div class="col">
             <p class="life-container" *ngFor="let edu of education">
 
-                <input type="submit" class="btn" value="update" (click)='updateEducation(edu.id)'>
-                <input type="submit" class="btn" value="delete" (click)='deleteEducation(edu.id)'>
+                <input type="submit" class="btn" value="update" (click)='confirmUpdate(edu.id!)'>
+                <input type="submit" class="btn" value="delete" (click)='confirmDelete(edu.id!)'>
 
                 {{edu.highSchool}} – {{edu.university}}
             </p>

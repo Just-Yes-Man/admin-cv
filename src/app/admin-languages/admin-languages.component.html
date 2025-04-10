@@ -20,8 +20,8 @@
         <div class="col">
             <p class="life-container" *ngFor="let lan of languagues">
 
-                <input type="submit" class="btn" value="update" (click)='updateLanguages(lan.id)'>
-                <input type="submit" class="btn" value="delete" (click)='deleteLanguages(lan.id)'>
+                <input type="submit" class="btn" value="update" (click)='confirmUpdate(lan.id!)'>
+                <input type="submit" class="btn" value="delete" (click)='confirmDelete(lan.id!)'>
 
                 {{lan.originLanguage}} – {{lan.exLanguage}}
             </p>

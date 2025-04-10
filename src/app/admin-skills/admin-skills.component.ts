@@ -50,4 +50,16 @@ export class AdminSkillsComponent {
     console.log(id);
   }
 
+  confirmDelete(id: string) {
+    if (confirm('¿Estás seguro de que quieres eliminar este ítem?')) {
+      this.deleteSkill(id);
+    }
+  }
+
+  confirmUpdate(id: string) {
+    if (confirm('¿Estás seguro de que quieres actualizar este ítem?')) {
+      this.updateSkill(id);
+    }
+  }
+
 }

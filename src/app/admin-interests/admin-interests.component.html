@@ -19,8 +19,8 @@
         <div class="col">
             <p class="life-container" *ngFor="let interest of interests">
 
-                <input type="submit" class="btn" value="update" (click)='updateInterests(interest.id)'>
-                <input type="submit" class="btn" value="delete" (click)='deleteInterests(interest.id)'>
+                <input type="submit" class="btn" value="update" (click)='confirmUpdate(interest.id!)'>
+                <input type="submit" class="btn" value="delete" (click)='confirmDelete(interest.id!)'>
 
                 {{interest.work}}
             </p>

@@ -21,8 +21,8 @@
         <div class="col">
             <p class="life-container" *ngFor="let skill of skills">
 
-                <input type="submit" class="btn" value="update" (click)='updateSkill(skill.id)'>
-                <input type="submit" class="btn" value="delete" (click)='deleteSkill(skill.id)'>
+                <input type="submit" class="btn" value="update" (click)='confirmUpdate(skill.id!)'>
+                <input type="submit" class="btn" value="delete" (click)='confirmDelete(skill.id!)'>
 
                 {{skill.frameworks}} – {{skill.languages}}
             </p>

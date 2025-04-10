@@ -50,4 +50,15 @@ export class AdminEducationComponent {
     });
     console.log(id);
   }
+  confirmDelete(id: string) {
+    if (confirm('¿Estás seguro de que quieres eliminar este ítem?')) {
+      this.deleteEducation(id);
+    }
+  }
+
+  confirmUpdate(id: string) {
+    if (confirm('¿Estás seguro de que quieres actualizar este ítem?')) {
+      this.updateEducation(id);
+    }
+  }
 }

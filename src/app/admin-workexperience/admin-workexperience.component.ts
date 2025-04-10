@@ -50,5 +50,18 @@ export class AdminWorkexperienceComponent {
     });
     console.log(id);
   }
+
+
+  confirmDelete(id: string) {
+    if (confirm('¿Estás seguro de que quieres eliminar este ítem?')) {
+      this.deleteJob(id);
+    }
+  }
+
+  confirmUpdate(id: string) {
+    if (confirm('¿Estás seguro de que quieres actualizar este ítem?')) {
+      this.updateJob(id);
+    }
+  }
 }
 

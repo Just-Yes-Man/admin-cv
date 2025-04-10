@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 50%;
+    border-style: double;
+}
+
+.componente {
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}

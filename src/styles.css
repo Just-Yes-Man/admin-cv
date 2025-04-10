@@ -1,27 +1,55 @@
-@import url('https://fonts.googlesapis.com/css?family=Raleway:300,700');
-body{
-   background: #2E9ce6;
+body {
+   background-color: #2C2C54 !important;
+   color: gold !important;
    padding: 3em;
    font-family: 'Raleway', 'Arial';
-   color: #fff;
+
+
 }
 
-ul{
+.container {
+   display: flex;
+   align-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+   width: 50%;
+   min-width: fit-content;
+   border-style: double;
+}
+
+.form {
+   padding-top: 1%;
+   padding-bottom: 1%;
+}
+
+.componente {
+   display: flex;
+   align-content: center;
+   flex-direction: column;
+   flex-wrap: wrap;
+}
+
+.titulo {
+   font-size: x-large;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+ul {
    list-style-type: none;
    margin: 0 0 2em 0;
    padding: 0;
 }
 
-ul li{
+ul li {
    display: inLine;
    margin-right: 30px;
 }
 
-ul li a{
+ul li a {
    font-size: 1.5em
 }
 
-a{
-   color: #fff;
+a {
+   color: gold !important;
    text-decoration: none;
 }

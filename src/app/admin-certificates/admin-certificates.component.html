@@ -1,30 +1,22 @@
-<div class="componente">
-    <div class="container color-dark">
-        <div class="col">
-            <p class="titulo">Certificate items</p>
-        </div>
+<div class="certificate-container">
+    <div class="certificate-header">
+      <p class="certificate-title">Certificate Items</p>
     </div>
-
-    <div class="container color-light form">
-        <div class="col">
-            <form>
-                <input type="text" class="txt" name="email" placeholder="email"
-                    [(ngModel)]="myCertificates.certificateMobile">
-                <br>
-                <input type="text" class="txt" name="Lifegoal" placeholder="Lifegoal"
-                    [(ngModel)]="myCertificates.certificateWeb">
-                <br>
-                <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarCertificates()">
-            </form>
-        </div>
-
-        <div class="col">
-            <p class="life-container" *ngFor="let cer of certificates">
-                <input type="submit" class="btn" value="update" (click)='confirmUpdate(cer.id!)'>
-                <input type="submit" class="btn" value="delete" (click)='confirmDelete(cer.id!)'>
-
-                {{cer.certificateMobile}} – {{cer.certificateWeb}}
-            </p>
-        </div>
+  
+    <div class="certificate-form-container">
+      <form class="certificate-form">
+        <input class="certificate-input" type="text" name="email" placeholder="Mobile" [(ngModel)]="myCertificates.certificateMobile">
+        <input class="certificate-input" type="text" name="Lifegoal" placeholder="Web" [(ngModel)]="myCertificates.certificateWeb">
+        <input class="submit-btn" type="submit" value="{{ btnTxt }}" (click)="agregarCertificates()">
+      </form>
     </div>
-</div>
+  
+    <div class="certificate-list">
+      <p *ngFor="let cer of certificates" class="certificate-item">
+        <input class="action-btn" type="submit" value="Update" (click)='confirmUpdate(cer.id!)'>
+        <input class="action-btn" type="submit" value="Delete" (click)='confirmDelete(cer.id!)'>
+        {{ cer.certificateMobile }} – {{ cer.certificateWeb }}
+      </p>
+    </div>
+  </div>
+  

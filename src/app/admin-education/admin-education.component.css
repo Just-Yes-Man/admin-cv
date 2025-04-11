@@ -1,15 +1,105 @@
-.container {
+/* Container */
+.education-container {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    width: 80%; /* Reduce width */
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Title */
+  .education-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .education-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #34495e;
+  }
+  
+  /* Form Container */
+  .education-form-container {
+    margin-bottom: 20px;
+  }
+  
+  /* Form Elements */
+  .education-form {
     display: flex;
-    align-content: center;
     flex-direction: column;
-    flex-wrap: wrap;
-    width: 50%;
-    border-style: double;
-}
-
-.componente {
+    gap: 15px;
+  }
+  
+  .education-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .submit-btn {
+    padding: 8px;
+    background-color: #e67e22;  /* Changed color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #d35400; /* Darker shade of orange */
+  }
+  
+  /* List Section */
+  .education-list {
+    margin-top: 20px;
+  }
+  
+  .education-item {
     display: flex;
-    align-content: center;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+  
+  .action-btn {
+    padding: 5px 10px;
+    background-color: #3498db; /* Changed to a blue shade */
+    color: white;
+    border: none;
+    border-radius: 3px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .action-btn:hover {
+    background-color: #2980b9; /* Darker blue */
+  }
+  
+  .action-btn:first-child {
+    background-color: #f39c12; /* Yellow for "update" */
+  }
+  
+  .action-btn:first-child:hover {
+    background-color: #e67e22;
+  }
+  

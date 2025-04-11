@@ -1,0 +1,98 @@
+.work-container {
+    background-color: #f2f3f4;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    width: 90%;
+    max-width: 700px;
+  }
+  
+  .work-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .work-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #2e4053;
+  }
+  
+  .work-form-container {
+    margin-bottom: 25px;
+  }
+  
+  .work-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .work-input {
+    padding: 10px;
+    border: 1px solid #ccd1d1;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    background-color: #ffffff;
+  }
+  
+  .submit-btn {
+    padding: 10px;
+    background-color: #2e86de;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #21618c;
+  }
+  
+  .work-list {
+    margin-top: 20px;
+  }
+  
+  .work-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #d6dbdf;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #17202a;
+  }
+  
+  .action-btn {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 10px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+  
+  .update-btn {
+    background-color: #2980b9;
+  }
+  
+  .update-btn:hover {
+    background-color: #2471a3;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  

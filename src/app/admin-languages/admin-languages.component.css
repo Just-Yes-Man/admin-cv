@@ -1,0 +1,104 @@
+.languages-container {
+    background-color: #e8f8f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.08);
+    margin: 30px auto;
+    width: 80%;
+    max-width: 600px;
+  }
+  
+  .languages-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .languages-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #117864;
+  }
+  
+  .languages-form-container {
+    margin-bottom: 25px;
+  }
+  
+  .languages-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .languages-input {
+    padding: 10px;
+    border: 1px solid #a2d9ce;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    background-color: #ffffff;
+  }
+  
+  .submit-btn {
+    padding: 10px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #17a589;
+  }
+  
+  .languages-list {
+    margin-top: 20px;
+  }
+  
+  .languages-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #d1f2eb;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #145a32;
+  }
+  
+  .action-btn {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: white;
+    margin-right: 10px;
+  }
+  
+  .update-btn {
+    background-color: #5dade2;
+  }
+  
+  .update-btn:hover {
+    background-color: #3498db;
+  }
+  
+  .delete-btn {
+    background-color: #e74c3c;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c0392b;
+  }
+  

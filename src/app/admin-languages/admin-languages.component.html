@@ -1,30 +1,24 @@
-<div class="componente">
-    <div class="container color-dark">
-        <div class="col">
-            <p class="titulo">languages items</p>
-        </div>
+<div class="languages-container">
+    <div class="languages-header">
+      <p class="languages-title">Languages Items</p>
     </div>
-
-    <div class="container color-light form">
-        <div class="col">
-            <form>
-                <input type="text" class="txt" name="startDate" placeholder="start date (mm/yyyy)"
-                    [(ngModel)]="myLanguages.originLanguage"> <br>
-                <input type="text" class="txt" name="endDate" placeholder="end date (mm/yyyy)"
-                    [(ngModel)]="myLanguages.exLanguage"><br>
-
-                <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarLanguages()">
-            </form>
-        </div>
-
-        <div class="col">
-            <p class="life-container" *ngFor="let lan of languagues">
-
-                <input type="submit" class="btn" value="update" (click)='confirmUpdate(lan.id!)'>
-                <input type="submit" class="btn" value="delete" (click)='confirmDelete(lan.id!)'>
-
-                {{lan.originLanguage}} – {{lan.exLanguage}}
-            </p>
-        </div>
+  
+    <div class="languages-form-container">
+      <form class="languages-form">
+        <input class="languages-input" type="text" name="startDate" placeholder="Lenguaje Origen"
+               [(ngModel)]="myLanguages.originLanguage">
+        <input class="languages-input" type="text" name="endDate" placeholder="Lenguaje Extra"
+               [(ngModel)]="myLanguages.exLanguage">
+        <input class="submit-btn" type="submit" value="{{ btnTxt }}" (click)="agregarLanguages()">
+      </form>
     </div>
-</div>
+  
+    <div class="languages-list">
+      <p *ngFor="let lan of languagues" class="languages-item">
+        <input class="action-btn update-btn" type="submit" value="Update" (click)="confirmUpdate(lan.id!)">
+        <input class="action-btn delete-btn" type="submit" value="Delete" (click)="confirmDelete(lan.id!)">
+        {{ lan.originLanguage }} – {{ lan.exLanguage }}
+      </p>
+    </div>
+  </div>
+  

@@ -1,30 +1,24 @@
-<div class="componente">
-
-    <div class="container color-dark">
-        <div class="col">
-            <p class="titulo">skills items</p>
-        </div>
+<div class="skills-container">
+    <div class="skills-header">
+      <p class="skills-title">Skills Items</p>
     </div>
-
-    <div class="container color-light form">
-        <div class="col">
-            <form>
-                <input type="text" class="txt" name="startDate" placeholder="start date (mm/yyyy)"
-                    [(ngModel)]="mySkills.frameworks"> <br>
-                <input type="text" class="txt" name="endDate" placeholder="end date (mm/yyyy)"
-                    [(ngModel)]="mySkills.languages"><br>
-
-                <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarSkill()">
-            </form>
-        </div>
-
-        <div class="col">
-            <p class="life-container" *ngFor="let skill of skills">
-
-                <input type="submit" class="btn" value="update" (click)='confirmUpdate(skill.id!)'>
-                <input type="submit" class="btn" value="delete" (click)='confirmDelete(skill.id!)'>
-
-                {{skill.frameworks}} – {{skill.languages}}
-            </p>
-        </div>
+  
+    <div class="skills-form-container">
+      <form class="skills-form">
+        <input class="skills-input" type="text" name="startDate" placeholder="Start date (MM/YYYY)"
+               [(ngModel)]="mySkills.frameworks">
+        <input class="skills-input" type="text" name="endDate" placeholder="End date (MM/YYYY)"
+               [(ngModel)]="mySkills.languages">
+        <input class="submit-btn" type="submit" value="{{ btnTxt }}" (click)="agregarSkill()">
+      </form>
     </div>
+  
+    <div class="skills-list">
+      <p *ngFor="let skill of skills" class="skills-item">
+        <input class="action-btn update-btn" type="submit" value="Update" (click)="confirmUpdate(skill.id!)">
+        <input class="action-btn delete-btn" type="submit" value="Delete" (click)="confirmDelete(skill.id!)">
+        {{ skill.frameworks }} – {{ skill.languages }}
+      </p>
+    </div>
+  </div>
+  

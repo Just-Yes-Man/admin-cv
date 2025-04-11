@@ -1,29 +1,21 @@
-<div class="componente">
-    <div class="container color-dark">
-        <div class="col">
-            <p class="titulo">interests items</p>
-        </div>
+<div class="interests-container">
+    <div class="interests-header">
+      <p class="interests-title">Interests Items</p>
     </div>
-
-    <div class="container color-light form">
-        <div class="col">
-            <form>
-                <input type="text" class="txt" name="email" placeholder="email" [(ngModel)]="myInterests.work">
-                <br>
-
-
-                <input type="submit" class="btn" value="{{ btnTxt }}" (click)="agregarInterests()">
-            </form>
-        </div>
-
-        <div class="col">
-            <p class="life-container" *ngFor="let interest of interests">
-
-                <input type="submit" class="btn" value="update" (click)='confirmUpdate(interest.id!)'>
-                <input type="submit" class="btn" value="delete" (click)='confirmDelete(interest.id!)'>
-
-                {{interest.work}}
-            </p>
-        </div>
+  
+    <div class="interests-form-container">
+      <form class="interests-form">
+        <input class="interests-input" type="text" name="email" placeholder="Intereses" [(ngModel)]="myInterests.work">
+        <input class="submit-btn" type="submit" value="{{ btnTxt }}" (click)="agregarInterests()">
+      </form>
     </div>
-</div>
+  
+    <div class="interests-list">
+      <p *ngFor="let interest of interests" class="interests-item">
+        <input class="action-btn" type="submit" value="Update" (click)="confirmUpdate(interest.id!)">
+        <input class="action-btn" type="submit" value="Delete" (click)="confirmDelete(interest.id!)">
+        {{ interest.work }}
+      </p>
+    </div>
+  </div>
+  

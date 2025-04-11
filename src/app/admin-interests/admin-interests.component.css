@@ -1,0 +1,109 @@
+/* Main container */
+.interests-container {
+    background-color: #fef9e7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.07);
+    margin-top: 20px;
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Header title */
+  .interests-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .interests-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: #7d6608;
+  }
+  
+  /* Form container */
+  .interests-form-container {
+    margin-bottom: 20px;
+  }
+  
+  .interests-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .interests-input {
+    padding: 10px;
+    border: 1px solid #d5d8dc;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #fffdf6;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    padding: 10px;
+    background-color: #f4d03f;
+    color: #5d6d7e;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    transition: background-color 0.3s;
+  }
+  
+  .submit-btn:hover {
+    background-color: #f1c40f;
+  }
+  
+  /* List items */
+  .interests-list {
+    margin-top: 20px;
+  }
+  
+  .interests-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: #fcf3cf;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #7d6608;
+  }
+  
+  /* Action buttons */
+  .action-btn {
+    padding: 6px 12px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  .action-btn:hover {
+    background-color: #d68910;
+  }
+  
+  .action-btn:first-child {
+    background-color: #58d68d;
+  }
+  
+  .action-btn:first-child:hover {
+    background-color: #2ecc71;
+  }
+  
